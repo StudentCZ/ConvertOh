@@ -1,12 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
-  const [state, setState] = useState(null);
-  return (
-    <div className='App'>
-      <button onClick={() => {}}>Change Number</button>
-    </div>
-  );
+  return <div className='App'>Hello</div>;
 }
 
 export default App;
