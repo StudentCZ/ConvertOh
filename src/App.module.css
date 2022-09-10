@@ -10,3 +10,11 @@ body {
   border: 0.5vw solid black;
   height: 50vh;
 }
+
+.navLink {
+  display: block;
+}
+
+.link {
+  display: inline;
+}
