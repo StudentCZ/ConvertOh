@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Currency() {
-  return <div>Currency</div>;
+  return <h1>Currency</h1>;
 }
 
 export default Currency;
