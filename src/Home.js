@@ -3,6 +3,7 @@ import { useState } from 'react';
 import style from './Home.module.css';
 import Temp from './Temp';
 import Currency from './Currency';
+import Measurement from './Measurement';
 
 function Home() {
   const [showTemp, setShowTemp] = useState(false);
@@ -11,13 +12,16 @@ function Home() {
   const HandleClick = () => {
     setShowTemp(true);
     setShowCurrency(false);
+    setShowMeasurement(false);
   };
   const HandleClick2 = () => {
     setShowCurrency(true);
     setShowTemp(false);
+    setShowMeasurement(false);
   };
   const HandleClick3 = () => {
-    setShowTemp(true);
+    setShowMeasurement(true);
+    setShowTemp(false);
     setShowCurrency(false);
   };
   return (

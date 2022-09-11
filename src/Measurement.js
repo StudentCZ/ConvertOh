@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Measurement() {
-  return <div>Measurement</div>;
+  return <h1>Measurement</h1>;
 }
 
 export default Measurement;
