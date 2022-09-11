@@ -13,11 +13,13 @@ function Home() {
       <h2>A Conversion Calulator</h2>
       <div className={style.border}>
         <nav className={style.navLink}>
-          <li className={style.link}>Temp</li>
+          <li className={style.link} onClick={onClick}>
+            Temp
+          </li>
           <li className={style.link}>Currency</li>
           <li className={style.link}>Measurement</li>
         </nav>
-        <Temp />
+        {showTemp ? <Temp /> : null}
       </div>
     </>
   );
