@@ -1,7 +1,12 @@
 import React from 'react';
+import Home from './Home';
 
 const Temp = () => {
-  return <div>Hello</div>;
+  return (
+    <>
+      <h1>Hello</h1>
+    </>
+  );
 };
 
 export default Temp;
