@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.border {
+  border: 0.5vw solid black;
+  height: 50vh;
+}
+
+.navLink {
+  display: block;
+}
+
+.link {
+  display: inline;
+  padding-left: 1vw;
+}
