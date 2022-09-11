@@ -7,8 +7,8 @@ function Temp() {
       <input></input>
 
       <select>
-        <option>Fahrenhit</option>
-        <option>Celcius</option>
+        <option>Fahrenheit</option>
+        <option>Celsius</option>
       </select>
     </>
   );
