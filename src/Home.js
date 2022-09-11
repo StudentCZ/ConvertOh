@@ -7,6 +7,7 @@ import Currency from './Currency';
 function Home() {
   const [showTemp, setShowTemp] = useState(false);
   const [showCurrency, setShowCurrency] = useState(false);
+  const [showMeasurement, setShowMeasurement] = useState(false);
   const HandleClick = () => {
     setShowTemp(true);
     setShowCurrency(false);
@@ -14,6 +15,10 @@ function Home() {
   const HandleClick2 = () => {
     setShowCurrency(true);
     setShowTemp(false);
+  };
+  const HandleClick3 = () => {
+    setShowTemp(true);
+    setShowCurrency(false);
   };
   return (
     <>
@@ -27,10 +32,13 @@ function Home() {
           <li className={style.link} onClick={HandleClick2}>
             Currency
           </li>
-          <li className={style.link}>Measurement</li>
+          <li className={style.link} onClick={HandleClick3}>
+            Measurement
+          </li>
         </nav>
         {showTemp ? <Temp /> : null}
         {showCurrency ? <Currency /> : null}
+        {showMeasurement ? <Measurement /> : null}
       </div>
     </>
   );
