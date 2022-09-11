@@ -16,6 +16,8 @@ body {
 }
 
 .link {
+  cursor: pointer;
   display: inline;
   padding-left: 1vw;
+  font-size: 2vw;
 }
