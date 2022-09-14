@@ -5,6 +5,7 @@ function Currency() {
   return (
     <>
       <CurrencyRow />
+      <div>=</div>
       <CurrencyRow />
     </>
   );
