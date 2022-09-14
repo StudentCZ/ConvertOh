@@ -13,19 +13,25 @@ function Currency() {
     fetch(EXCHANGE_URL)
       .then((res) => res.json())
       .then((data) => {
-        const firstCurrency = Object.keys(data.rates)[0];
+        const firstCurrency = Object.keys(data.rates)[149];
         setCurrencyOption([data.base, ...Object.keys(data.rates)]);
-        setFromCurrency(data.base);
-        setToCurrency(firstCurrency);
+        setFromCurrency(Object.keys(data.rates)[149]);
+        setToCurrency(data.base);
       });
   }, []);
 
   return (
     <>
       <h1>Convert</h1>
-      <CurrencyRow currencyOption={currencyOption} />
+      <CurrencyRow
+        currencyOption={currencyOption}
+        selectedCurrency={fromCurrency}
+      />
       <div className={style.equals}>=</div>
-      <CurrencyRow currencyOption={currencyOption} />
+      <CurrencyRow
+        currencyOption={currencyOption}
+        selectedCurrency={toCurrency}
+      />
     </>
   );
 }
