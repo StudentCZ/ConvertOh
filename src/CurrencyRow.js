@@ -12,7 +12,7 @@ function CurrencyRow(props) {
   return (
     <div>
       <input
-        type='number'
+        type='text'
         className={style.input}
         value={amount}
         onChange={onChangeAmount}

@@ -17,7 +17,7 @@ function Currency() {
     fromAmount = amount;
     toAmount = (amount * exchangeRate).toFixed(4);
   } else {
-    fromAmount = amount / exchangeRate.toFixed(4);
+    fromAmount = (amount / exchangeRate).toFixed(4);
     toAmount = amount;
   }
 
