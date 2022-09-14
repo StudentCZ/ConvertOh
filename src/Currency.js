@@ -32,6 +32,14 @@ function Currency() {
   }
 
   useEffect(() => {
+    if (fromCurrency !== null && toCurrency !== null) {
+      fetch(`${EXCHANGE_URL}?base=${fromCurrency}&symbols=${toCurrency}`)
+        .then((res) => res.json())
+        .then((data) => setExchangeRate(data.rates[toCurrency]));
+    }
+  }, [fromCurrency, toCurrency]);
+
+  useEffect(() => {
     fetch(EXCHANGE_URL)
       .then((res) => res.json())
       .then((data) => {
