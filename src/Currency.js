@@ -26,11 +26,13 @@ function Currency() {
       <CurrencyRow
         currencyOption={currencyOption}
         selectedCurrency={fromCurrency}
+        onChangeCurrency={(e) => setFromCurrency(e.target.value)}
       />
       <div className={style.equals}>=</div>
       <CurrencyRow
         currencyOption={currencyOption}
         selectedCurrency={toCurrency}
+        onChangeCurrency={(e) => setToCurrency(e.target.value)}
       />
     </>
   );
