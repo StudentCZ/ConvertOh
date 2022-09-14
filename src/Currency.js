@@ -15,9 +15,9 @@ function Currency() {
   let toAmount, fromAmount;
   if (amountInFromCurrency) {
     fromAmount = amount;
-    toAmount = amount * exchangeRate;
+    toAmount = (amount * exchangeRate).toFixed(4);
   } else {
-    fromAmount = amount / exchangeRate;
+    fromAmount = amount / exchangeRate.toFixed(4);
     toAmount = amount;
   }
 
