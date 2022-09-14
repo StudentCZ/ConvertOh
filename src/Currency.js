@@ -21,6 +21,16 @@ function Currency() {
     toAmount = amount;
   }
 
+  function handleFromAmountChange(e) {
+    setAmount(e.target.value);
+    setAmountInFromCurrency(true);
+  }
+
+  function handleToAmountChange(e) {
+    setAmount(e.target.value);
+    setAmountInFromCurrency(false);
+  }
+
   useEffect(() => {
     fetch(EXCHANGE_URL)
       .then((res) => res.json())
@@ -40,6 +50,7 @@ function Currency() {
         currencyOption={currencyOption}
         selectedCurrency={fromCurrency}
         onChangeCurrency={(e) => setFromCurrency(e.target.value)}
+        onChangeAmount={handleFromAmountChange}
         amount={fromAmount}
       />
       <div className={style.equals}>=</div>
@@ -47,6 +58,7 @@ function Currency() {
         currencyOption={currencyOption}
         selectedCurrency={toCurrency}
         onChangeCurrency={(e) => setToCurrency(e.target.value)}
+        onChangeAmount={handleToAmountChange}
         amount={toAmount}
       />
     </>
