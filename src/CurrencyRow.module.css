@@ -1,5 +1,11 @@
 .input {
   border: 1px solid #333;
   border-radius: 5px;
-  padding: 0.5vw;
+  padding: 0.5rem;
+}
+
+select {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
 }
