@@ -1,14 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import CurrencyRow from './CurrencyRow';
 import style from './Currency.module.css';
 
 const EXCHANGE_URL = `https://api.exchangerate.host/latest`;
 
 function Currency() {
+  const [currencyOption, setCurrencyOption] = useState([]);
+  console.log(currencyOption);
+
   useEffect(() => {
     fetch(EXCHANGE_URL)
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        setCurrencyOption([data.base, ...Object.keys(data.rates)]);
+      });
   }, []);
 
   return (
