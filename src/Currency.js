@@ -1,7 +1,12 @@
 import React from 'react';
+import CurrencyRow from './CurrencyRow';
 
 function Currency() {
-  return <h1>Currency</h1>;
+  return (
+    <>
+      <CurrencyRow />
+    </>
+  );
 }
 
 export default Currency;
