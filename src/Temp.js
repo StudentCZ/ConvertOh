@@ -16,8 +16,8 @@ function Temp() {
   };
   return (
     <>
-      <h1>Temp</h1>
-      <input type='number' onChange={setF}></input>
+      <h1>Convert</h1>
+      <input type='number' value={temp.f} onChange={setF}></input>
 
       <select>
         <option value={temp.f}>Fahrenheit</option>
