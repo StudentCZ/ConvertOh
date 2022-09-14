@@ -19,9 +19,9 @@ function Currency() {
   return (
     <>
       <h1>Convert</h1>
-      <CurrencyRow />
+      <CurrencyRow currencyOption={currencyOption} />
       <div className={style.equals}>=</div>
-      <CurrencyRow />
+      <CurrencyRow currencyOption={currencyOption} />
     </>
   );
 }
