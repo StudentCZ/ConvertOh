@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function Temp() {
-  const [temp, setTemp] = useState({ f: null, c: null });
+  const [temp, setTemp] = useState({ f: 0, c: 32 });
   const setC = (e) => {
     setTemp({
       c: e.target.value,
