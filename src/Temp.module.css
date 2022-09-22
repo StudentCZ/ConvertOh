@@ -1,0 +1,16 @@
+.input {
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 0.5vw;
+}
+
+.select {
+  margin-left: 0.5rem;
+  padding: 0.5vw;
+  border-radius: 5px;
+}
+
+.equals {
+  font-weight: bold;
+  font-size: 2rem;
+}

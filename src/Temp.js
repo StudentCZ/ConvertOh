@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import style from './Temp.module.css';
 
 function Temp() {
   const [temp, setTemp] = useState({ f: 0, c: 32 });
@@ -16,19 +17,31 @@ function Temp() {
   };
   return (
     <>
+      <h1>Convert</h1>
       <div>
-        <h1>Convert</h1>
-        <input type='number' value={temp.f} onChange={setF}></input>
+        <input
+          className={style.input}
+          type='number'
+          value={temp.f}
+          onChange={setF}
+        ></input>
 
-        <select>
+        <select className={style.select}>
           <option value={temp.f}>Fahrenheit</option>
         </select>
       </div>
-
       <div>
-        <input type='number' value={temp.c} onChange={setC}></input>
+        <span className={style.equals}>=</span>
+      </div>
+      <div>
+        <input
+          className={style.input}
+          type='number'
+          value={temp.c}
+          onChange={setC}
+        ></input>
 
-        <select>
+        <select className={style.select}>
           <option>Celsius</option>
         </select>
       </div>
