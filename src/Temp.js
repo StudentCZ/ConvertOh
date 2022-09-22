@@ -16,19 +16,22 @@ function Temp() {
   };
   return (
     <>
-      <h1>Convert</h1>
-      <input type='number' value={temp.f} onChange={setF}></input>
+      <div>
+        <h1>Convert</h1>
+        <input type='number' value={temp.f} onChange={setF}></input>
 
-      <select>
-        <option value={temp.f}>Fahrenheit</option>
-        <option value={temp.c}>Celsius</option>
-      </select>
+        <select>
+          <option value={temp.f}>Fahrenheit</option>
+        </select>
+      </div>
 
-      <input type='number' value={temp.c} onChange={setC}></input>
+      <div>
+        <input type='number' value={temp.c} onChange={setC}></input>
 
-      <select>
-        <option>Celsius</option>
-      </select>
+        <select>
+          <option>Celsius</option>
+        </select>
+      </div>
     </>
   );
 }
